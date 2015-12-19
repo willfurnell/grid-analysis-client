@@ -1,0 +1,14 @@
+[
+JobName = "CERNatSchoolAnalysis_001";
+Executable = "/bin/sh";
+# Make sure to replace the testdata folder with the actual location to your data!
+# This will run the script 'run.sh' with the two arguments, the CVMFS location of the software
+# and the location of the data to be analysed (in this case uploaded with the job).
+Arguments = "run.sh /cvmfs/researchinschools.egi.eu/software/grid-analysis/ testdata/";
+StdOutput = "stdout.txt";
+StdError = "stderr.txt";
+# Make sure to replace the testdata folder with the actual location to your data!
+# You may not need to include this if your data is stored on a storage element.
+InputSandbox = {"run.sh", "testdata/"};
+OutputSandbox = {"stdout.txt", "stderr.txt", "frames.json"};
+]
