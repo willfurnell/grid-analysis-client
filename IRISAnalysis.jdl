@@ -1,5 +1,5 @@
 [
-JobName = "CERNatSchoolAnalysis_001";
+JobName = "IRISAnalysis_001";
 Executable = "/bin/sh";
 # Make sure to replace the testdata folder with the actual location to your data!
 # This will run the script 'run.sh' with the two arguments, the CVMFS location of the software
