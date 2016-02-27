@@ -1,14 +1,7 @@
-[
-JobName = "IRISAnalysis_001";
-Executable = "run.sh";
-# Make sure to replace the testdata folder with the actual location to your data!
-# This will run the script 'run.sh' with the two arguments, the CVMFS location of the software
-# and the location of the data to be analysed (in this case uploaded with the job).
-Arguments = "run.sh /cvmfs/researchinschools.egi.eu/software/grid-analysis/ testdata.zip";
-StdOutput = "stdout.txt";
-StdError = "stderr.txt";
-# Make sure to replace the testdata folder with the actual location to your data!
-# You may not need to include this if your data is stored on a storage element.
-InputSandbox = {"run.sh", "testdata.zip"};
-OutputSandbox = {"stdout.txt", "stderr.txt", "frames.json"};
-]
+JobName       = "IRISAnalysis";
+Executable    = "IRISAnalysisClient.sh";
+StdOutput     = "StdOut";
+StdError      = "StdErr";
+InputSandbox  = {"IRISAnalysisClient.sh", "testdata.zip"};
+OutputSandbox = {"StdOut", "StdErr", "frames.json"};
+Arguments     = "/cvmfs/researchinschools.egi.eu/software/grid-analysis/ testdata.zip";
