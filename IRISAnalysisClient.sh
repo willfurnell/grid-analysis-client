@@ -12,11 +12,11 @@
 #
 # This file has been modified from the original: https://github.com/gridpp/cvmfs-getting-started/blob/master/run.sh
 
-export PATH=$1/lib/:$PATH
+export PATH=/cvmfs/lucid.egi.eu/libraries/:$PATH
 
 # Add the Python modules from the LUCID CVMFS repo to the PYTHONPATH. This is so the software can use lucid-utils and
 # its dependencies.
-export PYTHONPATH=/cvmfs/lucid.egi.eu/libraries/python2.6/site-packages/:$PYTHONPATH
+export PYTHONPATH=/cvmfs/lucid.egi.eu/libraries/python2.6/site-packages/:/cvmfs/lucid.egi.eu/libraries/:$PYTHONPATH
 
 # Add the supporting libraries to the library linking path.
 export LD_LIBRARY_PATH=/cvmfs/lucid.egi.eu/libraries/:$LD_LIBRARY_PATH
